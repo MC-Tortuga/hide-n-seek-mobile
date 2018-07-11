@@ -1,6 +1,12 @@
-    ///<reference path="../../../node_modules/bingmaps/types/MicrosoftMaps/Microsoft.Maps.All.d.ts" />
+///<reference path="../../../node_modules/bingmaps/types/MicrosoftMaps/Microsoft.Maps.All.d.ts" />
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {
+  IonicPage,
+  NavController,
+  NavParams
+} from 'ionic-angular';
+
+import { HomePage } from '../home/home';
 
 
 /**
@@ -15,12 +21,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   selector: 'page-map',
   templateUrl: 'map.html',
 })
+
 export class MapPage {
 
-  
   constructor(public navCtrl: NavController, public navParams: NavParams) {
- 
   }
-
-
+  navigateToHome() {
+    console.log("Navigating...");
+    this.navCtrl.push(HomePage);
+  }
 }

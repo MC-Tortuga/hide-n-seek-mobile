@@ -1,14 +1,19 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Home
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
+  Hello!
   <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
+    Welcome to Hide n Seek!
   </p>
+
+  <div padding>
+      <button ion-button color="primary" block (click)="navigateToLogin()">Sign In</button>
+      <button ion-button color="primary" block (click)="navigateToRegistration()">Sign Up</button>
+    </div>
 </ion-content>

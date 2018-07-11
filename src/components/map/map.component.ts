@@ -3,29 +3,59 @@ import { Component } from '@angular/core';
 import { MarkerTypeId, IMapOptions } from 'angular-maps';
 
 
+
 @Component({
   selector: 'app-bing-map',
   templateUrl: 'map.component.html'
 })
 export class MapComponent {
 
-  map;
+  latLng = {
+    lat: 0,
+    lng: 0
+  };
+  pins;
 
-  constructor() {
+  _markerTypeId = MarkerTypeId
 
-  }
-
-   _markerTypeId = MarkerTypeId
-  // a little trick so we can use enums in the template...
-
-   _options: IMapOptions = {
+  _options: IMapOptions = {
     disableBirdseye: false,
     disableStreetside: false,
-    navigationBarMode: 1
+    navigationBarMode: 1,
+    zoom: 6
+
   };
+
+
+  constructor() {
+this.getUserLocation();
+  }
+
   // for all available options for the various components, see IInfoWindowOptions, IInfoWindowAction, IMarkerOptions, IMapOptions, IMarkerIconInfo
 
-   _click() {
+  getUserLocation() {
+    navigator.geolocation.getCurrentPosition(position => {
+      this.latLng.lat = position.coords.latitude;
+
+      this.latLng.lng = position.coords.longitude;
+
+    
+      var map = new Microsoft.Maps.Map(document.getElementById("map"),{
+        disableBirdseye: false,
+        disableStreetside: false,
+        navigationBarMode: 1,
+        zoom: 6
+  
+    });
+
+    // map.setView()
+  
+
+    }
+
+    );
+  }
+  _click() {
     console.log("hello world...");
   }
 }

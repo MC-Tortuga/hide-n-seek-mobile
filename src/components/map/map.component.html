@@ -1,11 +1,10 @@
 <div style="height: 500px">
   
-    <x-map [Options]="_options">
+    <x-map id="map" [Options]="_options">
         <x-map-marker
-            [Latitude]="30" 
-            [Longitude]="90" 
+            [Latitude]="latLng.lat" 
+            [Longitude]="latLng.lng" 
             [Title]="'My Marker'" 
-            [IconUrl]="'https://cdn0.iconfinder.com/data/icons/industrial-icons/164/2-128.png'" 
             [IconInfo]="{
                 markerType: _markerTypeId.FontMarker,
                 fontName: 'FontAwesome',
