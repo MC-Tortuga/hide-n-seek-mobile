@@ -1,3 +1,4 @@
+/// <reference path="../../node_modules/bingmaps/types/MicrosoftMaps/Microsoft.Maps.All.d.ts" />
 import { NgModule } from '@angular/core';
 import { MapComponent } from './map/map.component';
 import { MapModule, MapAPILoader, BingMapAPILoaderConfig, BingMapAPILoader, WindowRef, DocumentRef } from "angular-maps";
