@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Http } from '@angular/http';
-import { MapPage } from '../map/map';
-import { LandingPage } from '../landing/landing';
-
-
-import { HomePage } from '../home/home';
-import { MapPage } from '../map/map';
 import { LandingPage } from '../landing/landing';
 
 @Component({
