@@ -40,13 +40,7 @@ this.getUserLocation();
       this.latLng.lng = position.coords.longitude;
 
     
-      var map = new Microsoft.Maps.Map(document.getElementById("map"),{
-        disableBirdseye: false,
-        disableStreetside: false,
-        navigationBarMode: 1,
-        zoom: 6
-  
-    });
+      
 
     // map.setView()
   

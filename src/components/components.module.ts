@@ -14,7 +14,7 @@ import { MapModule, MapAPILoader, BingMapAPILoaderConfig, BingMapAPILoader, Wind
 export class ComponentsModule { }
 export function MapServiceProviderFactory() {
 	let bc: BingMapAPILoaderConfig = new BingMapAPILoaderConfig();
-	bc.apiKey = "AlNStI4zlV2ljxfbF06gBMyXjUgzWnedwDn4yyCNpSWpdwCUKQ3KuGrNkdzczbMs"; // your bing map key
+	bc.apiKey = ""; // your bing map key
 	bc.branch = "experimental";
 	// to use the experimental bing brach. There are some bug fixes for
 	// clustering in that branch you will need if you want to use 
