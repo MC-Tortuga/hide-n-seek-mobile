@@ -1,21 +1,12 @@
-<div style="height: 500px">
-  
-    <x-map id="map" [Options]="_options">
-        <x-map-marker
-            [Latitude]="latLng.lat" 
-            [Longitude]="latLng.lng" 
-            [Title]="'My Marker'" 
-            [IconInfo]="{
-                markerType: _markerTypeId.FontMarker,
-                fontName: 'FontAwesome',
-                fontSize: 48,
-                color: 'green',
-                markerOffsetRatio: { x: 0.5, y: 1 },
-                text: '\uF276'
-            }"> 
-            <x-info-box [DisableAutoPan]="true" [Title]="'My InfoBox'" [Description]="'Hi, this is the content of the <strong>info window</strong>. It is your responsibility to implement functionality such as close, etc...'">
-                <x-info-box-action [Label]="'Click Me'" (ActionClicked)="_click()"></x-info-box-action>
-            </x-info-box>   
+<i class="fa"></i>
+<div style="height: 600px">
+    <x-map #xmap [Options]="_options" [Box]="_box">
+            <x-map-polygon [Paths]="cityCircle" [Title]="'My Polygon'" (Click)="_click($event)"></x-map-polygon>
+        <x-map-marker [Latitude]="userLocation.lat" [Longitude]="userLocation.lng" [Title]="'My Marker'"[IconInfo]="_iconInfo">
         </x-map-marker>
     </x-map>
 </div>
+<div class="description">
+  See <a href="https://github.com/infusion-code/angular-maps">https://github.com/infusion-code/angular-maps</a> for more info. 
+</div>    
+`,
